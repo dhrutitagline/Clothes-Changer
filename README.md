@@ -43,14 +43,15 @@ python download_models.py
 
 5. Start the Gradio interface:
 ```bash
-python run/gradio_ootd.py
+cd VirtualWardrobe/run
+python gradio_ootd.py
 ```
 The app will automatically use GPU.
 
 Access the local web interface at http://127.0.0.1:7860.
 
 ### Folder Structure
-
+```bash
 VirtualWardrobe/
 ├─ checkpoints/         # Pretrained models
 ├─ ootd/                # Model inference code
@@ -60,4 +61,5 @@ VirtualWardrobe/
 ├─ .gitignore
 ├─ requirements.txt
 ├─ README.md
+```
 
