@@ -1,0 +1,11 @@
+*.ckpt
+__pycache__/
+.vscode/
+*.pyc
+.uuid
+env/
+checkpoints/clip-vit-large-patch14/
+checkpoints/humanparsing/
+checkpoints/ootd/
+checkpoints/openpose/
+.cache/
