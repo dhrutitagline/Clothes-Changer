@@ -52,7 +52,7 @@ Access the local web interface at http://127.0.0.1:7860.
 
 ### Folder Structure
 ```bash
-VirtualWardrobe/
+Clothes-Changer/
 ├─ checkpoints/         # Pretrained models
 ├─ ootd/                # Model inference code
 ├─ preprocess/          # OpenPose & human parsing utilities
