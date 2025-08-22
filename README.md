@@ -1,6 +1,6 @@
-# VirtualWardrobe
+# Clothes Changer
 
-VirtualWardrobe is an AI-powered virtual outfit try-on tool. Upload your photo and see how different clothes fit on you. The project leverages advanced deep learning models for realistic garment fitting and pose estimation.
+Clothes Changer is an AI-powered virtual outfit try-on tool. Upload your photo and see how different clothes fit on you. The project leverages advanced deep learning models for realistic garment fitting and pose estimation.
 
 ---
 
