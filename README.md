@@ -19,8 +19,8 @@ VirtualWardrobe is an AI-powered virtual outfit try-on tool. Upload your photo a
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/dhrutitagline/VirtualWardrobe.git
-cd VirtualWardrobe
+git clone https://github.com/dhrutitagline/Clothes-Changer.git
+cd Clothes-Changer
 ```
 
 2. Create a Python virtual environment and activate it:
@@ -43,7 +43,7 @@ python download_models.py
 
 5. Start the Gradio interface:
 ```bash
-cd VirtualWardrobe/run
+cd run
 python gradio_ootd.py
 ```
 The app will automatically use GPU.

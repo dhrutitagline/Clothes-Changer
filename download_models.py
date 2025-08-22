@@ -76,20 +76,14 @@ if __name__ == "__main__":
 import fileinput
 import os
 import sys
+import site
 
-# --- Detect if running in Google Colab ---
-if "google.colab" in sys.modules or "COLAB_GPU" in os.environ:
-    target_file = "/usr/local/lib/python3.11/dist-packages/diffusers/utils/dynamic_modules_utils.py"
-    degradations_py = "/usr/local/lib/python3.11/dist-packages/basicsr/data/degradations.py"
+# --- Get the correct site-packages path ---
+site_packages = site.getsitepackages()[0]  # e.g. /usr/local/lib/python3.12/dist-packages
 
-# --- Else assume Local (venv) ---
-else:
-    base_env = os.environ.get("VIRTUAL_ENV")  # detect active venv path
-    if not base_env:
-        raise EnvironmentError("No virtual environment detected. Please activate your env first.")
-
-    target_file = os.path.join(base_env, "lib/python3.11/site-packages/diffusers/utils/dynamic_modules_utils.py")
-    degradations_py = os.path.join(base_env, "lib/python3.11/site-packages/basicsr/data/degradations.py")
+# --- Target files ---
+target_file = os.path.join(site_packages, "diffusers/utils/dynamic_modules_utils.py")
+degradations_py = os.path.join(site_packages, "basicsr/data/degradations.py")
 
 # --- Safety checks ---
 if not os.path.exists(target_file):
@@ -112,3 +106,5 @@ with fileinput.FileInput(degradations_py, inplace=True, backup='.bak') as file:
             print(line.replace("functional_tensor", "functional"), end='')
         else:
             print(line, end='')
+
+print("✅ Patching completed successfully!")
